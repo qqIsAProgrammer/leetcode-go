@@ -1,5 +1,6 @@
 package linked_list
 
+// AC
 func removeNthFromEnd(head *ListNode, n int) *ListNode {
 	dummy := new(ListNode)
 	dummy.Next = head
