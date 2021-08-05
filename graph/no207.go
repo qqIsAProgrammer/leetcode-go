@@ -1,5 +1,6 @@
 package graph
 
+// AC
 func canFinish(numCourses int, prerequisites [][]int) bool {
 	var (
 		edges = make([][]int, numCourses)
