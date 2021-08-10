@@ -2,7 +2,7 @@ package dp
 
 import "math"
 
-func maxProfit(prices []int) int {
+func maxProfit102(prices []int) int {
 	low := math.MaxInt64
 	profit := 0
 	for _, p := range prices {
