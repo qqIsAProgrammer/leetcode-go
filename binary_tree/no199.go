@@ -2,29 +2,28 @@ package binary_tree
 
 // AC
 func rightSideView(root *TreeNode) []int {
-	res := make([]int, 0)
+	ans := make([]int, 0)
 	if root == nil {
-		return res
+		return ans
 	}
 
 	queue := make([]*TreeNode, 0)
 	queue = append(queue, root)
-	for len(queue) != 0 {
+	for len(queue) > 0 {
 		size := len(queue)
-		var tn *TreeNode
-		for size != 0 {
-			tn = queue[0]
+		var node *TreeNode
+		for size > 0 {
+			node = queue[0]
 			queue = queue[1:]
-			if tn.Left != nil {
-				queue = append(queue, tn.Left)
+			if node.Left != nil {
+				queue = append(queue, node.Left)
 			}
-			if tn.Right != nil {
-				queue = append(queue, tn.Right)
+			if node.Right != nil {
+				queue = append(queue, node.Right)
 			}
 			size--
 		}
-		res = append(res, tn.Val)
+		ans = append(ans, node.Val)
 	}
-
-	return res
+	return ans
 }

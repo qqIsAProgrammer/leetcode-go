@@ -13,13 +13,13 @@ type entry struct {
 	value int
 }
 
-func Constructor(capacity int) LRUCache {
-	return LRUCache{
-		capacity: capacity,
-		ll:       list.New(),
-		cache:    make(map[int]*list.Element),
-	}
-}
+//func Constructor(capacity int) LRUCache {
+//	return LRUCache{
+//		capacity: capacity,
+//		ll:       list.New(),
+//		cache:    make(map[int]*list.Element),
+//	}
+//}
 
 func (this *LRUCache) Get(key int) int {
 	if ele, hit := this.cache[key]; hit {

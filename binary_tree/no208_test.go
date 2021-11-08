@@ -1,6 +1,9 @@
 package binary_tree
 
-import "testing"
+import (
+	"log"
+	"testing"
+)
 
 func TestInsert(t *testing.T) {
 	trie := Constructor()
@@ -8,8 +11,8 @@ func TestInsert(t *testing.T) {
 }
 
 func TestSearch(t *testing.T) {
-	trie := Constructor()
-	trie.Insert("apple")
-	res := trie.StartsWith("app")
-	t.Log(res)
+	var tn []*TreeNode
+	tn2 := make([]*TreeNode, 0)
+	log.Println(tn)
+	log.Println(tn2)
 }
